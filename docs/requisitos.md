@@ -2,8 +2,7 @@
 
 ## Escopo
 
-Esse é um sistema de monitoramento de compromissos decenais da criança
-e adolescente. O sistema deverá permitir o acompanhamento de problemas públicos, compromissos, objetivos, linhas de ação, tarefas e indicadores, incluindo funcionalidades de busca, filtros, controle de usuários, exportação de dados, histórico de alterações e visualização de progresso.
+Esse é um sistema de monitoramento de compromissos decenais da criança e adolescente. O sistema deverá permitir o acompanhamento de problemas públicos, compromissos, objetivos, linhas de ação, tarefas e indicadores, incluindo funcionalidades de busca, filtros, controle de usuários, exportação de dados, histórico de alterações e visualização de progresso.
 
 ---
 
@@ -11,11 +10,11 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 
 ## RF01
 
-**Descrição:** O sistema deve permitir que o usuário visualize os 23 problemas públicos, cada um vinculado a um Compromisso Decenal da criança e adolescentel
+**Descrição:** O sistema deve permitir que o usuário visualize os 23 problemas públicos, cada um vinculado a um Compromisso Decenal da criança e adolescente
 
 ## RF02
 
-**Descrição:** O sistema deve permitir a visualização hierárquica de: Objetivo ➔ Linhas de Ação ➔ Tarefas
+**Descrição:** O sistema deve permitir a visualização hierárquica de: Público alvo ➔ Compromisso ➔ Objetivo ➔ Linhas de Ação ➔ Tarefas
 
 ## RF03
 
@@ -35,7 +34,7 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 
 ## RF07
 
-**Descrição:** O sistema deve mostrar quando foi feita a última atualização dos dados
+**Descrição:** O sistema deve mostrar quando foi feita a última atualização dos dados dos indicadores.
 
 ## RF08
 
@@ -51,7 +50,11 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 
 ## RF11
 
-**Descrição:** O sistema deve possuir um login de usuários.
+**Descrição:** O sistema deve possuir um login de usuários com e-mail e senha durante a fase de protótipo.
+
+### RF11.2
+
+**Descrição:** O sistema deve possuir um login de usuários com login .gov quando for entregue.
 
 ## RF12
 
@@ -63,11 +66,11 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 
 ## RF14
 
-**Descrição:** O sistema deve aplicar medidas de segurança nos dados inseridos.
+**Descrição:** EXCLUÍDO
 
 ## RF15
 
-**Descrição:** O sistema deve possuir um painel de administrador, para elevar ou reduzir permissões de usuários e outras funcionalidades por usuários autorizados.
+**Descrição:** EXCLUÍDO
 
 ## RF16
 
@@ -79,7 +82,7 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 
 ## RF18
 
-**Descrição:** O sistema deve diferenciar visualmente indicadores por seu respectivo tipo
+**Descrição:** O sistema deve diferenciar visualmente indicadores por seu respectivo tipo (% e média)
 
 ## RF19
 
@@ -99,7 +102,7 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 
 ## RF23
 
-**Descrição:** O sistema deve utilizar Tokens JWT para aumentar a segurança.
+**Descrição:** EXCLUÍDO
 
 ---
 
@@ -125,7 +128,7 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 
 ## RNF05 
 
-**Descrição:** O sistema deve ser bem documentado.
+**Descrição:** O sistema deve ser documentado utilizando documentação viva, mostrando quais mudanças aconteceram, por que elas aconteceram, permitindo entender o sistema todo a partir da documentação.
 
 ## RNF06 
 
@@ -138,5 +141,13 @@ e adolescente. O sistema deverá permitir o acompanhamento de problemas público
 ## RNF08 
 
 **Descrição:** O sistema deve encerrar a sessão do usuário automáticamente após 30 minutos de inatividade.
+
+## RNF09
+
+**Descrição:** O sistema deve aplicar medidas de segurança nos dados inseridos.
+
+## RNF10
+
+**Descrição>** O sistema deve utilizar Tokens JWT para aumentar a segurança.
 
 ---

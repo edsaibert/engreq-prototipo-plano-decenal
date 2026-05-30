@@ -1,9 +1,5 @@
 # Documento de Requisitos Funcionais e não Funcionais
 
-## Escopo
-
-Esse é um sistema de monitoramento de compromissos decenais da criança e adolescente. O sistema deverá permitir o acompanhamento de problemas públicos, compromissos, objetivos, linhas de ação, tarefas e indicadores, incluindo funcionalidades de busca, filtros, controle de usuários, exportação de dados, histórico de alterações e visualização de progresso.
-
 ---
 
 # Requisitos Funcionais
@@ -106,9 +102,8 @@ Esse é um sistema de monitoramento de compromissos decenais da criança e adole
 
 ---
 
----
 
-# 3. Requisitos Não Funcionais
+# Requisitos Não Funcionais
 
 ## RNF01 
 

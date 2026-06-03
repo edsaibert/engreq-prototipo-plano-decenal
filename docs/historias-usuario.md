@@ -58,3 +58,63 @@ Como usuário público, quero visualizar o status e progresso de cada tarefa do 
 
 --- 
 
+## US03 - Localizar informações específicas
+
+### Descrição 
+Como usuário público, quero buscar e filtrar informações do Plano Decenal para encontrar com maior facilidade os dados que procuro. 
+
+### Prioridade 
+**Obrigatória** 
+
+### Critérios de Aceitação 
+- [ ] O usuário deve poder pesquisar por palavra-chave, responsável, eixo e compromisso.
+- [ ] O usuário deve poder aplicar filtros (ex: compromisso, indicador, período de tempo, responsável).
+- [ ] O sitema deve atualizar os resultados conforme os filtros selecionados ou a busca realizada.
+
+### Vínculo com Requisitos 
+- **RF04:** O sistema deve permitir que o usuário faça buscas no sistema para a exibição das informações correspondentes. (palavra-chave, Responsável, eixos do Plano Decenal, Compromisso)
+- **RF05:** O sistema deve permitir que o usuário aplique filtros (ex. compromisso, indicador, período de tempo, responsável) para a exibição das informações do sistema.
+- **RF17:** O sistema deve permitir que o usuário filtre gráficos de indicadores por ano.
+
+### Vínculo com Telas do Protótipo 
+- 
+
+--- 
+
+## US04 - Exportação de Dados
+
+### Descrição
+Como membro do Conselho Estadual, quero exportar os dados de monitoramento de um conjunto filtrado, para poder elaborar relatórios, realizar análises e elaborar apresentações sobre o Plano Decenal.
+
+### Prioridade
+**Importante**
+
+### Critérios de Aceitação
+- [ ] O usuário deve ser capaz de exportar os dados de monitoramento como um arquivo .csv, .xlsx ou .pdf
+
+### Vínculo com Requisitos
+- **RF06:** O sistema deve disponibilizar funcionalidade de exportação (Excel, CSV, PDF) dos dados de monitoramento de um conjunto filtrado.
+
+### Vínculo com Telas do Protótipo 
+-
+
+--- 
+
+## US05 - Data de Atualização dos Dados
+
+### Descrição
+Como usuário público, quero visualizar a última data de atualização dos dados para saber se as informações apresentadas estão atualizadas.
+
+### Prioridade
+**Obrigatória**
+
+### Critérios de Aceitação
+- [ ] O sistema deve registrar e exibir a data da última atualização dos dados dos indicadores. 
+
+### Vínculo com Requisitos
+- **RF07:** O sistema deve mostrar quando foi feita a última atualização dos dados dos indicadores.
+
+### Vínculo com Telas do Protótipo 
+-
+
+---

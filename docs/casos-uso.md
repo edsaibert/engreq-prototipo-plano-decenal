@@ -7,7 +7,7 @@
 ### **UC01 - Criar Plano Decenal**
 **Ator Principal:** Integrantes da Secretaria/Conselho Estadual responsável pelo Plano Decenal a ser desenvolvido
 
-**Pré-condições:** Usuário autenticado e com permissão de criar o Plano Decenal.
+**Pré-condições:** Usuário autenticado e com permissão de escrita.
 
 **Fluxo Principal:**
 1. O usuário acessa a seção de criação de novos planos decenais;
@@ -31,15 +31,15 @@
 ### **UC02 - Editar Estrutura do Plano Decenal**
 **Ator Principal:** Integrantes da Secretaria/Conselho responsável pelo plano decenal.
 
-**Pré-condições:** Usuário autenticado e com permissão de edição/escrita no Plano Decenal selecionado.
+**Pré-condições:** Usuário autenticado e com permissão de escrita no Plano Decenal selecionado.
 
 **Fluxo Principal:**
-1. Usuário seleciona o modo de edição a partir da seção do Plano Decenal;
-2. Sistema valida as permissões do usuário;
+1. O Usuário seleciona o modo de edição a partir da seção do Plano Decenal;
+2. O sistema valida as permissões do usuário;
 3. O usuário seleciona o elemento que deseja modificar (Compromisso, Objetivo, Linha de Ação ou Tarefa);
-4. Usuário realiza as alterações;
-5. Usuário confirma as alterações;
-6. Sistema valida as modificações, atualiza o Plano Decenal e seus respectivos registros de auditoria e exibe uma mensagem de sucesso.
+4. O usuário realiza as alterações;
+5. O usuário confirma as alterações;
+6. O sistema valida as modificações, atualiza o Plano Decenal e seus respectivos registros de auditoria e exibe uma mensagem de sucesso.
 
 **Fluxos de Exceção:**
 * 2a. Se o usuário não tiver permissão de edição sobre o respectivo Plano Decenal, o sistema não autoriza o modo de edição;
@@ -57,10 +57,10 @@
 **Pré-condições:** Nenhuma.
 
 **Fluxo Principal:**
-1. Usuário acessa a lista de Planos Decenais;
-2. Sistema exibe os Planos Decenais Cadastrados;
-3. Usuário seleciona um Plano Decenal;
-4. Sistema retorna a visualização hierárquica, monitoramento das tarefas e indicadores relacionados;
+1. O usuário acessa a lista de Planos Decenais;
+2. O sistema exibe os Planos Decenais Cadastrados;
+3. O usuário seleciona um Plano Decenal;
+4. O sistema retorna a visualização hierárquica, monitoramento das tarefas e indicadores relacionados;
 5. O usuário navega visualmente pelas seções.
 
 **Fluxo Alternativo:**
@@ -92,12 +92,12 @@
 ### **UC05 - Cadastrar Indicador**
 **Ator Principal:** Integrantes dos Conselhos/Secretarias Estaduais.
 
-**Pré-condições:** Usuário autenticado e com permissão de cadastro de indicadores.
+**Pré-condições:** Usuário autenticado e com permissão de escrita.
 
 **Fluxo Principal:**
-1. Usuário acessa o módulo de criação de indicador;
-2. Usuário preenche a descrição do indicador, seleciona o tipo entre percentual e numérico e o vincula a um Objetivo ou Tarefa existente;
-3. Usuário confirma a publicação do indicador;
+1. O usuário acessa o módulo de criação de indicador;
+2. O usuário preenche a descrição do indicador, seleciona o tipo entre percentual e numérico e o vincula a um Objetivo ou Tarefa existente;
+3. O usuário confirma a publicação do indicador;
 4. O sistema registra o indicador e emite um alerta de sucesso.
 
 **Fluxos de Exceção:**
@@ -115,9 +115,9 @@
 **Pré-condições:** Usuário autenticado e com permissão de escrita. Indicador selecionado.
 
 **Fluxo Principal:**
-1. Usuário seleciona modo de edição do indicador;
-2. Sistema abre formulário de edição;
-3. Usuário altera os campos do indicador;
+1. O usuário seleciona modo de edição do indicador;
+2. O sistema abre formulário de edição;
+3. O usuário altera os campos do indicador;
 4. O usuário confirma as modificações;
 5. O sistema valida as entradas, recalcula os gráficos de monitoramento e exibe uma mensagem de sucesso.
 
@@ -152,14 +152,14 @@
 ### **UC08 - Importar Planilha de Dados**
 **Ator Principal:** Integrante dos Conselhos/Secretarias Estaduais.
 
-**Pré-condições:** Usuário autenticado com perfil de escrita.
+**Pré-condições:** Usuário autenticado com permissão de leitura das planilhas de dados.
 
 **Fluxo Principal:**
-1. Usuário acessa o módulo de dados e seleciona a seção de importação de dados;
-2. Sistema responde com um formulário;
-3. Usuário seleciona indicador a ser atualizado;
-4. Usuário seleciona o arquivo de dados a ser enviado;
-5. Usuário confirma a importação de dados;
+1. O usuário acessa o módulo de dados e seleciona a seção de importação de dados;
+2. O sistema responde com um formulário;
+3. O usuário seleciona indicador a ser atualizado;
+4. O usuário seleciona o arquivo de dados a ser enviado;
+5. O usuário confirma a importação de dados;
 6. O sistema faz o upload e realiza a validação estrutural do arquivo;
 7. O sistema processa a planilha, atualiza o indicador selecionado e confirma a modificação.
 
@@ -223,10 +223,6 @@
 5. O usuário seleciona o tipo de acesso solicitado;
 6. O usuário confirma a solicitação;
 7. O sistema salva a requisição na fila do administrador e exibe uma mensagem de sucesso.
-
-**Fluxos de Exceção:**
-* 4a. Se o e-mail ou CPF inseridos já existirem na base de dados de usuários ativos ou solicitações vigentes, o sistema bloqueia o envio e avisa o usuário.
-* 4b. Se o serviço de autenticação retornar erro, o sistema aborta a operação de solicitação e notifica o usuário.
 
 **Pós-condições:**
 * A solicitação de acesso é registrada na fila de requisições dos usuários administradores.

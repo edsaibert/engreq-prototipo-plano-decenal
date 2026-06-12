@@ -2,7 +2,7 @@
 ---
 
 ## RN01
-**Descrição:** Visualização hierárquica obrigatória: Público alvo ➔ Compromisso ➔ Objetivo ➔ Linha de Ação ➔ Tarefa.
+**Descrição:** Visualização hierárquica obrigatória: Público alvo ➔ Compromisso ➔ Objetivo ➔ Linha de Ação ➔ Tarefa ➔ Indicador.
 
 ## RN02
 **Descrição:** Não é permitido excluir um elemento da hierarquia do Plano Decenal que já possua filhos.
@@ -24,3 +24,21 @@
 
 ## RN08
 **Descrição:** Todas as ações que alteram o estado do sistema necessitam de autenticação.
+
+## RN09
+**Descrição:** Os registros de auditoria devem ter controle de acesso de tal forma que:
+
+* Integrantes de Secretarias/Conselhos possam ver apenas os registros feitos pelo próprio grupo;
+* Integrantes da SEDEF possam ver todos os registros.
+
+## RN10
+**Descrição:** Planos Decenais só podem ser excluídos por integrantes da SEDEF.
+
+## RN11
+**Descrição:** Planos Decenais só podem ser editados por usuários com permissão de escrita no respectivo artefato.
+
+## RN12
+**Descrição:** Apenas administradores e integrantes da SEDEF podem elevar ou reduzir permissões de usuários cadastrados.
+
+## RN13
+**Descrição:** Os dados das planilhas são públicos e podem ser exportados por qualquer usuário.

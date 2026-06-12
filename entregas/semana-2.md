@@ -14,7 +14,7 @@ Foram desenvolvidas doze User Stories buscando cobrir todos os requisitos funcio
 
 ## Casos de Uso
 
-Foram levantados treze Casos de Uso para o sistema, analisando as principais ações dos usuários dentro do escopo apresentado pelos requisitos. Os Casos de Uso seguem a seguinte estrutura:
+Foram levantados quatorze Casos de Uso para o sistema, analisando as principais ações dos usuários dentro do escopo apresentado pelos requisitos. Os Casos de Uso seguem a seguinte estrutura:
 
 - Identificador: padrão UC<número do caso de uso>, por exemplo: UC01, UC02
 - Nome: indica ação dos atores, sempre no infinitivo
@@ -26,7 +26,7 @@ Foram levantados treze Casos de Uso para o sistema, analisando as principais aç
 
 ## Regras de Negócio
 
-Os casos de uso e os requisitos foram os artefatos utilizados para a geração das oito regras de negócio. Cada uma delas é composta por:
+Os casos de uso e os requisitos foram os artefatos utilizados para a geração das treze regras de negócio. Cada uma delas é composta por:
 
 - Identificador: padrão RN<número da regra de negócio>, por exemplo: RN01, RN02
 - Descrição: a regra/política explícita

@@ -38,7 +38,7 @@
 
 ## RF09
 
-**Descrição:** O sistema deve possuir um painel de administrador, para elevar ou reduzir permissões de usuários e outras funcionalidades por usuários autorizados
+**Descrição:** O sistema deve possuir um painel de administrador, para acesso exclusivo do administrador, que possibilite elevar ou reduzir permissões de usuários e controlar o acesso às funcionalidades do sistema de acordo com o perfil do usuário.
 
 ## RF10
 
@@ -54,7 +54,7 @@
 
 ## RF12
 
-**Descrição:** O sistema deve fornecer a possibilidade de inserção de problemas, compromissos, objetivos, etc via interface gráfica.
+**Descrição:** O sistema deve fornecer, para usuários autorizados, a possibilidade de inserção de problemas, compromissos, objetivos, etc via interface gráfica.
 
 ## RF13
 
@@ -90,11 +90,11 @@
 
 ## RF21
 
-**Descrição:** O sistema deve permitir o carregamento de dados por meio de planilhas
+**Descrição:** O sistema deve permitir, para usuários autorizados, o carregamento de dados por meio de planilhas.
 
 ## RF22
 
-**Descrição:** O sistema deve permitir a alteração de dados por meio da interface do sistema.
+**Descrição:** O sistema deve permitir, para usuários autorizados, a alteração de dados por meio da interface do sistema.
 
 ## RF23
 

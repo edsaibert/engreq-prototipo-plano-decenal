@@ -13,7 +13,7 @@
   --color-surface: #f5f9fc;
   --color-surface-elevated: #ffffff;
   --color-border: #d8e3ec;
-  --color-muted: #5f7282;
+  --color-muted: #333c44;
   --color-soft-blue: #e8f3fa;
   --color-soft-green: #edf8e9;
   --color-soft-black: #16222b;
@@ -134,7 +134,23 @@ a:hover {
   color: var(--color-secondary-green);
 }
 
+.text-link:hover {
+  color: var(--color-primary-blue);
+  text-decoration: underline;
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
 /* Fundo e blocos da marca */
+
+.bg-brand-green {
+  background: linear-gradient(135deg, var(--color-secondary-green), #7fc86b);
+  color: #11330a;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
 .bg-brand-primary {
   background: linear-gradient(135deg, var(--color-primary-blue), #095789 100%);
   border-left: 15px solid var(--color-secondary-green);
@@ -434,6 +450,15 @@ textarea:focus {
 textarea {
   min-height: 140px;
   resize: vertical;
+}
+
+.collapse summary {
+  cursor: pointer;
+  padding: 0.75rem;
+}
+
+.collapse[open] summary {
+  margin-bottom: 1rem;
 }
 
 .dropdown {

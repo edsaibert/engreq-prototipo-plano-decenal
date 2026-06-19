@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compromissos Decenais | Hierarquia</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="hero-banner" style="padding: 0.25rem; min-height: auto; border-radius: 0;">
+    <div class="page-section" style="display: flex; align-items: center; gap: 1rem;">
+      <button class="back-button" type="button" aria-label="Voltar" data-tooltip="Voltar à página anterior">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <h1 class="header-title" style="margin: 0; font-size: 1.5rem;">Hierarquia de Compromissos</h1>
+    </div>
+  </header>
+  
+  <main class="page-section stack">
+    <div>
+      <header class="section-heading">
+        <div>
+        <span class="section-kicker">Visualização hierárquica</span>
+        <h1 style="margin-top:.65rem;">Educação</h1>
+        <!-- <p class="text-muted" style="margin:.35rem 0 0;">Responsável Principal</p>
+        <p class="text-muted" style="margin:.35rem 0 0;">Colaboradores</p> -->
+      </div>
+
+      <div class="cluster">
+        <button class="btn btn-ghost" type="button" data-nav="historico.html" data-tooltip="Ver histórico de atualizações">
+          Editado por último ontem às 14:30
+        </button>
+        <!-- <button class="btn btn-primary" type="button" data-nav="historico.html" data-tooltip="Ver histórico de atualizações">Histórico</button> -->
+      </div>
+    </header>
+
+    
+    <section id="hierarquia" class="card surface-elevated stack">
+        <div class="grid grid-cols-2 gap-1 align-start">
+          <div style="padding:1rem 1.15rem;">
+                        <strong>Colaboradores</strong>
+                        <ul class="text-muted" style="margin:.35rem 0 0; padding-left:1.25rem;">
+              <li>Lorem Ipsum</li>
+              <li>Lorem Ipsum</li>
+            </ul>
+          </div>
+          <div style="padding:1rem 1.15rem;">
+            <strong>Responsável Principal</strong>
+            <p class="text-muted" style="margin:.35rem 0 0;">Lorem Ipsum</p>
+          </div>
+          
+        </div>
+        
+        <div class="divider" style="margin-top: -5px;"></div>
+
+        <div class="stack">
+
+          <div class="bg-brand-soft" style="padding:1rem 1.15rem;">
+            <strong>Problema Público</strong>
+            <p class="text-muted" style="margin:.35rem 0 0;">Persistência da evasão e do abandono escolar entre adolescentes em situação de vul-
+nerabilidade social e territorial.</p>
+          </div>
+          <div class="bg-brand-soft" style="padding:1rem 1.15rem;">
+            <strong>Compromisso</strong>
+            <p class="text-muted" style="margin:.35rem 0 0;">Fortalecer a permanência escolar de adolescentes, promovendo acompanhamento con-
+tínuo e articulação entre educação, assistência social e rede de proteção.</p>
+          </div>
+          <div class="bg-brand-soft" style="padding:1rem 1.15rem;">
+            <strong>Objetivo</strong>
+            <p class="text-muted" style="margin:.35rem 0 0;">Ampliar a capacidade de identificação e acompanhamento de adolescentes com risco
+de evasão escolar.</p>
+          </div>
+
+          <!-- <details class="dropdown">
+            <summary class="dropdown-toggle">
+              Select an option
+            </summary>
+
+            <ul class="dropdown-menu">
+              <li><a href="#" class="dropdown-item">Option 1</a></li>
+              <li><a href="#" class="dropdown-item">Option 2</a></li>
+              <li><a href="#" class="dropdown-item">Option 3</a></li>
+            </ul>
+          </details> -->
+          
+          <div class="bg-brand-soft" style="padding:1rem 1.15rem;">
+            <strong>Linhas de ação</strong>
+
+            <div class="bg-brand-soft" style="padding:1rem 1.15rem; margin-top:1rem;">
+              <details class="collapse">
+              <summary class="text-muted" style="margin:.35rem 0 0;">Qualificar os mecanismos de monitoramento educacional e integração entre os órgãos
+              responsáveis pelo acompanhamento dos estudantes.</summary>
+    
+              <div style="margin-top: 6px;">
+                  <strong>Tarefas</strong>
+                  <ul class="text-muted" style="margin:.35rem 0 0; padding-left:1.25rem;">
+                    <li>Implementar rotina integrada de identificação, registro e acompanhamento de adoles-
+      centes em risco de evasão escolar entre escolas, assistência social e gestão municipal.</li>
+                    <li>Mapear e aprimorar os sistemas de monitoramento escolar para identificação de estudantes em risco de evasão.</li>
+              </div>
+              </div>
+              </div>
+            </details>
+            </div>
+          <div class="bg-brand-soft" style="padding:1rem 1.15rem;">
+            <strong>Indicadores Relacionados</strong>
+            <ul class="text-muted" style="margin:.35rem 0 0; padding-left:1.25rem;">
+              <li class="text-link">Taxa de evasão escolar entre adolescentes de 15 a 17 anos</li>
+              <li class="text-link">Taxa de abandono escolar entre adolescentes de 15 a 17 anos</li>
+              <li class="text-link">Percentual de municípios com rotina integrada de monitoramento e acompanhamento de estudantes em risco de evasão escolar</li>
+          </div>
+
+      </section>
+    </section>
+  </main>
+</body>
+</html>

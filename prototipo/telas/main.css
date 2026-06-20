@@ -329,6 +329,15 @@ a:hover {
   border-left-color: var(--color-secondary-green);
 }
 
+.dialog {
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding-bottom: 5vh;
+  width: 70vw;
+  height: 60vh;
+}
+
 /* Botoes */
 .btn {
   appearance: none;
@@ -706,6 +715,33 @@ tbody tr:hover {
 
 .timeline-item:last-child::after {
   display: none;
+}
+
+/* clickable row */
+.timeline-header {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  color: inherit;
+}
+
+.timeline-header:hover {
+  color: var(--color-primary-blue);
+}
+
+/* hidden details */
+.timeline-details {
+  display: none;
+  margin-top: var(--space-2);
+  padding-left: 0.25rem;
+  color: var(--color-soft-black);
+  font-size: 0.95rem;
+}
+
+/* open state */
+.timeline-item.is-open .timeline-details {
+  display: block;
 }
 
 /* Navegacao / breadcrumb */

@@ -29,10 +29,31 @@
         <p class="text-muted" style="margin:.35rem 0 0;">Colaboradores</p> -->
       </div>
 
-      <div class="cluster">
-        <button class="btn btn-ghost" type="button" data-nav="historico.html" data-tooltip="Ver histórico de atualizações">
-          Editado por último ontem às 14:30
+      <dialog id="historico-dialog" class="dialog">
+        <iframe
+          src="historico.html"
+          width="100%"
+          height="95%"
+          style="border:0;">
+        </iframe>
+
+        <button
+        class="btn btn-primary"
+          type="button"
+          style="margin: 10px;"
+          data-close-dialog="historico-dialog">
+          Fechar
         </button>
+      </dialog>
+
+      <div class="cluster">
+      <button
+        class="btn btn-ghost"
+        type="button"
+        data-open-dialog="historico-dialog"
+        data-tooltip="Ver histórico de atualizações">
+        Editado por último ontem às 14:30
+      </button>
         <!-- <button class="btn btn-primary" type="button" data-nav="historico.html" data-tooltip="Ver histórico de atualizações">Histórico</button> -->
       </div>
     </header>

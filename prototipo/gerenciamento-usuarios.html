@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administrador</title>
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="page-header">
+            <h1>Painel de Administrador</h1>
+
+            <div class="accessibility-actions">
+                <button type="button" aria-label="Alternar modo de alto contraste">
+                    🌓 Alto Contraste
+                </button>
+            </div>
+            <div class="header-actions">
+                <button>Novo Usuário</button>
+                <button>Exportar Lista</button>
+                <button>Histórico de Acessos</button>
+            </div>
+        </header>
+
+        <section class="filters-section">
+
+            <h2>Busca e Filtros</h2>
+
+            <form class="filters-form">
+
+                <div class="form-group">
+                    <label for="busca">Buscar usuário</label>
+                    <input
+                        type="text"
+                        id="busca"
+                        placeholder="Nome ou e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="perfil">Perfil</label>
+                    <select id="perfil">
+                        <option>Todos</option>
+                        <option>SEDEF</option>
+                        <option>Conselho Estadual</option>
+                        <option>Secretaria</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option>Todos</option>
+                        <option>Ativo</option>
+                        <option>Inativo</option>
+                        <option>Bloqueado</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="orgao">Órgão</label>
+                    <input
+                        type="text"
+                        id="orgao"
+                        placeholder="Órgão ou secretaria">
+                </div>
+
+                <button type="submit">
+                    Filtrar
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="users-section">
+
+            <h2>Usuários Cadastrados</h2>
+
+            <table class="users-table">
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Perfil</th>
+                        <th>Órgão</th>
+                        <th>Status</th>
+                        <th>Último Acesso</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>João Silva</td>
+                        <td>joao@email.com</td>
+                        <td>Secretaria</td>
+                        <td>Secretaria de Estado da Educação</td>
+                        <td>Ativo</td>
+                        <td>17/06/2026</td>
+                        <td>
+                            <button>Editar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Maria Souza</td>
+                        <td>maria@email.com</td>
+                        <td>Conselho Estadual</td>
+                        <td>Conselho Estadual</td>
+                        <td>Ativo</td>
+                        <td>16/06/2026</td>
+                        <td>
+                            <button>Editar</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Ana Lima</td>
+                        <td>ana@email.com</td>
+                        <td>SEDEF</td>
+                        <td>SEDEF</td>
+                        <td>Ativo</td>
+                        <td>18/06/2026</td>
+                        <td>
+                            <button>Editar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="edit-user-section">
+
+            <h2>Editar Usuário</h2>
+
+            <form>
+
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="perfil-edicao">Perfil</label>
+                    <select id="perfil-edicao">
+                        <option>SEDEF</option>
+                        <option>Conselho Estadual</option>
+                        <option>Secretaria</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="orgao-edicao">Órgão</label>
+                    <input type="text" id="orgao-edicao">
+                </div>
+
+                <fieldset>
+                    <legend>Status</legend>
+
+                    <label>
+                        <input type="radio" name="status-usuario">
+                        Ativo
+                    </label>
+
+                    <label>
+                        <input type="radio" name="status-usuario">
+                        Inativo
+                    </label>
+
+                    <label>
+                        <input type="radio" name="status-usuario">
+                        Bloqueado
+                    </label>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="permissions-section">
+
+            <h2>Permissões</h2>
+
+            <form>
+
+                <label>
+                    <input type="checkbox" checked>
+                    Visualizar Indicadores
+                </label>
+
+                <label>
+                    <input type="checkbox" checked>
+                    Editar Indicadores
+                </label>
+
+                <label>
+                    <input type="checkbox" checked>
+                    Gerenciar Usuários
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Excluir Registros
+                </label>
+
+                <label>
+                    <input type="checkbox" checked>
+                    Exportar Dados
+                </label>
+
+                <button type="submit">
+                    Salvar Permissões
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="history-section">
+
+            <h2>Histórico de Alterações</h2>
+
+            <ul>
+
+                <li>
+                    <strong>18/06/2026 09:15</strong><br>
+                    Ana Lima alterou o perfil do usuário:
+                    Conselho Estadual → SEDEF
+                </li>
+
+                <li>
+                    <strong>17/06/2026 14:30</strong><br>
+                    Carlos Oliveira desbloqueou o usuário.
+                </li>
+
+                <li>
+                    <strong>15/06/2026 11:40</strong><br>
+                    Maria Souza teve suas permissões atualizadas.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

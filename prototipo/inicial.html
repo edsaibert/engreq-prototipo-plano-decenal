@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Decenal - Criança e Adolescente</title>
+    <style>
+        /* Definição da Paleta de Cores */
+        :root {
+            --cor-primaria-azul: #0B66A2;
+            --cor-primaria-branca: #FFFFFF;
+            --cor-secundaria-preta: #000000;
+            --cor-secundaria-verde: #96D67B;
+            
+            /* Cor de apoio neutra para fundos e divisões, evitando o preto puro em bordas grandes */
+            --cor-apoio-cinza: #f0f0f0; 
+        }
+
+        /* Estilos Base e Reset */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        
+        body { 
+            background-color: var(--cor-apoio-cinza); 
+            color: var(--cor-secundaria-preta); 
+            line-height: 1.6; 
+        }
+        
+        /* Navegação */
+        header { 
+            background-color: var(--cor-primaria-azul); 
+            color: var(--cor-primaria-branca); 
+            padding: 1rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 4px solid var(--cor-secundaria-verde); /* Detalhe com a cor secundária */
+        }
+        
+        nav button { 
+            background-color: transparent; 
+            color: var(--cor-primaria-branca); 
+            border: 2px solid var(--cor-primaria-branca); 
+            padding: 0.5rem 1rem; 
+            margin-left: 0.5rem; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            font-weight: bold;
+            transition: 0.3s; 
+        }
+        
+        nav button:hover, nav button.active { 
+            background-color: var(--cor-primaria-branca); 
+            color: var(--cor-primaria-azul); 
+        }
+
+        /* Contêiner Principal */
+        main { 
+            padding: 2rem; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        .screen { 
+            display: none; 
+            background: var(--cor-primaria-branca); 
+            padding: 2rem; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            border-top: 5px solid var(--cor-primaria-azul);
+        }
+        
+        .screen.active { 
+            display: block; 
+        }
+
+        /* Elementos Visuais Específicos */
+        h1, h2, h3, h4 { 
+            color: var(--cor-primaria-azul); 
+            margin-bottom: 1rem; 
+        }
+        
+        p {
+            color: var(--cor-secundaria-preta);
+        }
+
+        /* Formulário de Busca */
+        .search-bar { 
+            display: flex; 
+            gap: 1rem; 
+            margin-bottom: 2rem; 
+        }
+        
+        .search-bar input, .search-bar select { 
+            padding: 0.75rem; 
+            border: 1px solid var(--cor-secundaria-preta); 
+            border-radius: 4px; 
+            flex: 1; 
+            color: var(--cor-secundaria-preta);
+        }
+        
+        .search-bar button { 
+            padding: 0.75rem 2rem; 
+            background-color: var(--cor-secundaria-verde); 
+            color: var(--cor-secundaria-preta); 
+            border: 2px solid var(--cor-secundaria-preta); 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .search-bar button:hover {
+            background-color: #7bc55d; /* Um tom um pouco mais escuro do verde para o hover */
+        }
+
+        /* Cards de Resultados e Indicadores */
+        .card-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 1.5rem; 
+        }
+        
+        .card { 
+            border: 1px solid var(--cor-primaria-azul); 
+            padding: 1.5rem; 
+            border-radius: 6px; 
+            background-color: var(--cor-primaria-branca); 
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(11, 102, 162, 0.15);
+        }
+
+        .badge-status {
+            display: inline-block; 
+            margin-top: 15px; 
+            padding: 4px 12px; 
+            background-color: var(--cor-secundaria-verde); 
+            color: var(--cor-secundaria-preta);
+            border: 1px solid var(--cor-secundaria-preta);
+            border-radius: 4px; 
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Barras de Progresso */
+        .progress-bar-container {
+            margin-top: 1rem;
+        }
+
+        .progress-bar { 
+            width: 100%; 
+            background-color: var(--cor-primaria-branca); 
+            border: 1px solid var(--cor-secundaria-preta);
+            border-radius: 4px; 
+            overflow: hidden; 
+            height: 22px;
+        }
+        
+        .progress-fill { 
+            height: 100%; 
+            background-color: var(--cor-secundaria-verde); 
+            width: 0%; 
+            transition: width 0.8s ease-in-out; 
+            border-right: 1px solid var(--cor-secundaria-preta);
+        }
+
+        .progress-text {
+            text-align: right; 
+            font-size: 12px; 
+            margin-top: 6px;
+            font-weight: bold;
+            color: var(--cor-secundaria-preta);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Painel Decenal</h2>
+        <nav>
+            <button onclick="navigate('tela-inicial')" class="nav-btn active" id="btn-tela-inicial">Início</button>
+            <button onclick="navigate('tela-busca')" class="nav-btn" id="btn-tela-busca">Busca e Filtros</button>
+            <button onclick="navigate('tela-indicadores')" class="nav-btn" id="btn-tela-indicadores">Indicadores</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tela-inicial" class="screen active">
+            <h2>Visão Geral dos Compromissos</h2>
+            <p>Acompanhe a evolução das políticas públicas e os 23 problemas públicos vinculados ao Compromisso Decenal da criança e do adolescente.</p>
+            <div class="card-grid" style="margin-top: 2rem;">
+                <div class="card">
+                    <h3>Educação</h3>
+                    <p>Foco na permanência escolar e redução da evasão.</p>
+                </div>
+                <div class="card">
+                    <h3>Segurança Alimentar</h3>
+                    <p>Proteção social e nutricional de famílias vulneráveis.</p>
+                </div>
+                <div class="card">
+                    <h3>Saúde Mental</h3>
+                    <p>Atenção psicossocial voltada à infância e adolescência.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tela-busca" class="screen">
+            <h2>Busca e Filtros de Compromissos</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar por palavra-chave ou responsável...">
+                <select>
+                    <option value="">Eixo/Compromisso</option>
+                    <option value="educacao">Educação</option>
+                    <option value="saude">Saúde Mental</option>
+                    <option value="violencia">Violência Infantil</option>
+                </select>
+                <button onclick="alert('Filtragem aplicada no protótipo!')">Filtrar</button>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Objetivo: Ampliar o monitoramento de adolescentes com risco de evasão</h4>
+                    <p><strong>Linha de Ação:</strong> Implementar mecanismos digitais...</p>
+                    <p><strong>Responsável:</strong> Secretaria de Educação</p>
+                    <span class="badge-status">Em andamento</span>
+                </div>
+                <div class="card">
+                    <h4>Objetivo: Melhorar a capacidade de identificação</h4>
+                    <p><strong>Linha de Ação:</strong> Integrar informações de programas sociais...</p>
+                    <p><strong>Responsável:</strong> Assistência Social</p>
+                    <span class="badge-status" style="background-color: var(--cor-primaria-branca);">Não iniciada</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="tela-indicadores" class="screen">
+            <h2>Progresso dos Indicadores</h2>
+            <p>Monitoramento contínuo das metas estabelecidas.</p>
+            
+            <div class="card-grid" style="margin-top: 2rem;">
+                <div class="card">
+                    <h4>Taxa de Evasão Escolar</h4>
+                    <p>Meta de redução para o ano atual.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <p class="progress-text">65% da meta atingida</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h4>Famílias Acompanhadas (Nutrição)</h4>
+                    <p>Quantidade de famílias em segurança alimentar.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                        <p class="progress-text">40% da meta atingida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function navigate(screenId) {
+            // Oculta todas as telas
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            // Remove classe active dos botões
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostra a tela selecionada
+            document.getElementById(screenId).classList.add('active');
+            // Destaca o botão correspondente
+            const btnId = screenId.replace('tela-', 'btn-tela-');
+            document.getElementById(btnId).classList.add('active');
+            
+            // Pequeno truque para refazer a animação das barras de progresso ao abrir a tela de indicadores
+            if(screenId === 'tela-indicadores') {
+                const fills = document.querySelectorAll('.progress-fill');
+                fills.forEach(fill => {
+                    const width = fill.style.width;
+                    fill.style.width = '0%';
+                    setTimeout(() => {
+                        fill.style.width = width;
+                    }, 50);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

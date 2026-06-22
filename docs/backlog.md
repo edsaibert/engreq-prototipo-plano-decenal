@@ -15,6 +15,10 @@
 
 ## Pendente
 
+*não há cards pendentes xD*
+
+## Em Andamento
+
 ### C018 - Validação do protótipo
 
 **Descrição:** Cada integrante do grupo deverá encontrar problemas no protótipo inicial, seguindo a seção 8, "8 Validação", do enunciado do trabalho.
@@ -25,7 +29,71 @@
 
 ---
 
-## Em Andamento
+### C019 - Indicadores
+
+**Descrição:** Criação de novos card de visualização de indicadores em @prototipo/inicial.html
+
+**Responsável:** Alexander
+
+**Branch:**
+
+### C020 - Navegabilidade entre páginas
+
+**Descrição:** Como as páginas do protótipo foram implementadas de forma indepentende, navegar entre a tela inicial e a tela de login é impossível. Deve ser alterado o protótipo de modo que haja navegabilidade entre eles, como um cabeçalho com href
+
+**Responsável:** Alexander
+
+**Branch:**
+
+---
+
+## Concluído
+
+### C001 - Revisão inicial de requisitos
+**Descrição:** Ler todos os requisitos fornecidos e identificar ambiguidades.
+
+**Responsável:** Todos
+
+**Anotações:** O grupo se reuniu em aula dia 28/05, discutiu com o cliente sobre os requisitos, escopo e atores. Após a discussão, a documentação foi  alterada.
+
+**Branch:** S1-Requisitos
+
+---
+
+### C002 - Boilerplate de todos os arquivos iniciais da aplicação
+**Descrição:** Subir no repositório git 
+**Responsável:** Alexander
+**Branch:** S1-Requisitos
+
+---
+
+## C003 - Backlog Inicial
+**Descrição:** Transformar a conversa que o grupo teve no whatsapp e discord em uma lista de tarefas, baseada no enunciado do trabalho.
+**Responsável:** Alexander.
+**Branch:** S3-Backlog-Inicial
+
+---
+
+### C004 - Histórias de usuário
+**Descrição:** Elaborar histórias de usuário para as funcionalidades principais, bem como os critérios de aceitação.
+**Responsável:** Mayara
+**Branch** S2-User-Stores
+
+---
+
+### C005 - Casos de uso
+**Descrição:** Elaborar casos de uso iniciais.
+**Responsável:** Eduarda
+**Branch:** S2-Casos-Regras
+
+---
+
+### C006 - Regras de negócio
+**Descrição:** Escrever as regras de negócio iniciais.
+**Responsável:** Eduarda
+**Branch:** S2-Casos-Regras
+
+---
 
 ### C007 - Alteração nos requisitos
 **Descrição:** Alteração nos requisitos RF09, RF12, RF21 e RF22, proposto em discussão com com cliente.
@@ -129,53 +197,5 @@
 **Responsável:** Mayara
 
 **Branch:** 
-
----
-
-## Concluído
-
-### C001 - Revisão inicial de requisitos
-**Descrição:** Ler todos os requisitos fornecidos e identificar ambiguidades.
-
-**Responsável:** Todos
-
-**Anotações:** O grupo se reuniu em aula dia 28/05, discutiu com o cliente sobre os requisitos, escopo e atores. Após a discussão, a documentação foi  alterada.
-
-**Branch:** S1-Requisitos
-
----
-
-### C002 - Boilerplate de todos os arquivos iniciais da aplicação
-**Descrição:** Subir no repositório git 
-**Responsável:** Alexander
-**Branch:** S1-Requisitos
-
----
-
-## C003 - Backlog Inicial
-**Descrição:** Transformar a conversa que o grupo teve no whatsapp e discord em uma lista de tarefas, baseada no enunciado do trabalho.
-**Responsável:** Alexander.
-**Branch:** S3-Backlog-Inicial
-
----
-
-### C004 - Histórias de usuário
-**Descrição:** Elaborar histórias de usuário para as funcionalidades principais, bem como os critérios de aceitação.
-**Responsável:** Mayara
-**Branch** S2-User-Stores
-
----
-
-### C005 - Casos de uso
-**Descrição:** Elaborar casos de uso iniciais.
-**Responsável:** Eduarda
-**Branch:** S2-Casos-Regras
-
----
-
-### C006 - Regras de negócio
-**Descrição:** Escrever as regras de negócio iniciais.
-**Responsável:** Eduarda
-**Branch:** S2-Casos-Regras
 
 ---

@@ -13,3 +13,7 @@
 # v2:
 **Data:** 18/06
 **Descrição:** Nessa versão, os requisitos RF09, RF12, RF21 e RF22 foram alterados para reduzir possíveis ambiguidades e melhorar a clareza. Além disso, foi criada uma Matriz de Rastreabilidade inicial contendo os requisitos e user stories relacionados. Também foi feita uma identidade visual para os protótipos e adicionadas as telas de login, gerenciamento de usuários e um main.css.
+
+# v3:
+**Data:** 21/06
+**Descrição:** Nessa versão, todas as telas foram implementadas, bem como arquivos de entrega revisados. Para as próximas versões, o protótipo será melhorado, com ênfase na navegabilidade, e demais arquivos necessários alterados. Também, foi construída a matriz de rastreabilidade parcial, sendo necessário a finalização das telas para finalizar o preenchimento da matriz.

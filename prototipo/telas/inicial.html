@@ -189,6 +189,14 @@
             <button onclick="navigate('tela-inicial')" class="nav-btn active" id="btn-tela-inicial">Início</button>
             <button onclick="navigate('tela-busca')" class="nav-btn" id="btn-tela-busca">Busca e Filtros</button>
             <button onclick="navigate('tela-indicadores')" class="nav-btn" id="btn-tela-indicadores">Indicadores</button>
+        
+            <button onclick="window.location.href='gerenciamento-usuarios.html'" type="button">
+                Painel de Administrador
+            </button>
+
+            <button type="button" aria-label="Alternar modo de alto contraste">
+                🌓 Alto Contraste
+            </button>
         </nav>
     </header>
 
@@ -244,6 +252,17 @@
             <h2>Progresso dos Indicadores</h2>
             <p>Monitoramento contínuo das metas estabelecidas.</p>
             
+
+            <div style="margin-top: 1rem; margin-bottom: 2rem;">
+                <button onclick="exportarCSV()">
+                    Exportar CSV
+                </button>
+
+                <button onclick="exportarPDF()">
+                    Exportar PDF
+                </button>
+            </div>
+
             <div class="card-grid" style="margin-top: 2rem;">
                 <div class="card">
                     <h4>Taxa de Evasão Escolar</h4>
@@ -298,6 +317,13 @@
                     }, 50);
                 });
             }
+        }
+        function exportarCSV() {
+            alert("Protótipo: exportação dos indicadores para CSV.");
+        }
+
+        function exportarPDF() {
+            alert("Protótipo: exportação dos indicadores para PDF.");
         }
     </script>
 </body>

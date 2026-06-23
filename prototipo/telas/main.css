@@ -285,12 +285,19 @@ a:hover {
   flex-shrink: 0;
   width: 120px;
   height: 120px;
-  border-radius: 20%;
+  border-radius: 50%;
   background: var(--color-primary-white);
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Cartões */
@@ -454,6 +461,11 @@ select:focus,
 textarea:focus {
   border-color: var(--color-primary-blue);
   box-shadow: 0 0 0 4px rgba(11, 102, 162, 0.12);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
 }
 
 textarea {
@@ -760,6 +772,25 @@ tbody tr:hover {
   content: '/';
   margin-right: 0.35rem;
   color: #93a6b4;
+}
+
+/* Checkbox */
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.75rem 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    background: var(--color-primary-white);
+}
+
+.checkbox-item:hover {
+    background: var(--color-soft-blue);
 }
 
 /* Utilitarios de estado e alinhamento */

@@ -107,10 +107,16 @@
                 </div>
 
                 <div class="grid grid-cols-3">
-                    <article class="card card-accent">
+                  <article class="card card-accent">
                         <h3 class="card-title">Educação</h3>
                         <p class="card-meta">Foco na permanência escolar e redução da evasão.</p>
                         <span class="badge badge-primary">Em monitoramento</span>
+
+                        <div class="cluster" style="margin-top: 1rem;">
+                            <a href="hierarquia.html" class="btn btn-outline">
+                                Ver detalhes
+                            </a>
+                        </div>
                     </article>
 
                     <article class="card card-accent card-accent-success">
@@ -199,7 +205,7 @@
 
                 <div class="grid grid-cols-2">
                     <article class="card card-accent">
-                        <h3 class="card-title">Taxa de Evasão Escolar</h3>
+                        <h3 class="card-title">Taxa de Evasão Escolar entre Adolescentes de 15 a 17 anos</h3>
                         <p class="card-meta">Meta de redução para o ano atual.</p>
 
                         <div class="progress-bar-container">
@@ -262,6 +268,14 @@
         function exportarPDF() {
             alert('Protótipo: exportação dos indicadores para PDF.');
         }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const telaPelaUrl = window.location.hash.replace('#', '');
+
+            if (telaPelaUrl && document.getElementById(telaPelaUrl)) {
+                navigate(telaPelaUrl);
+            }
+        });
     </script>
 </body>
 </html>

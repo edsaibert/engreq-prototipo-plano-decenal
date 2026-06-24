@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main class="page-section stack">
+
+        <header class="bg-brand-primary stack">
+
+            <div class="cluster header-main">
+                <a href="inicial.html"
+                class="back-button"
+                aria-label="Voltar"
+                data-tooltip="Voltar à página inicial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </a>
+
+                <div class="logo-wrapper">
+                    <img src="logo.png" alt="Logo do sistema">
+                </div>
+
+                <div>
+                    <h1 class="brand-header">Gerenciamento de Usuários</h1>
+                    <p class="brand-body-text">
+                        Controle de perfis, permissões e ações administrativas do sistema.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cluster header-actions">
+                <button type="button" class="btn btn-secondary">
+                    🌓 Alto Contraste
+                </button>
+
+                <a href="login.html" class="btn btn-secondary">
+                    Trocar de Usuário
+                </a>
+            </div>
+
+        </header>
+
+        <section class="card">
+            <div class="section-heading">
+                <div>
+                    <h2>Resumo do acesso</h2>
+                    <p class="text-muted">
+                        Visão geral dos usuários cadastrados por perfil e situação.
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-primary">
+                    Novo Usuário
+                </button>
+            </div>
+
+            <div class="grid grid-cols-3">
+                <article class="card card-accent">
+                    <h3 class="card-title">Administradores</h3>
+                    <p class="card-meta">2 usuários com acesso total</p>
+                    <span class="badge badge-primary">Acesso crítico</span>
+                </article>
+
+                <article class="card card-accent card-accent-success">
+                    <h3 class="card-title">SEDEF</h3>
+                    <p class="card-meta">4 usuários autorizados</p>
+                    <span class="badge badge-success">Gestão de tarefas</span>
+                </article>
+
+                <article class="card card-accent">
+                    <h3 class="card-title">Conselho/Secretarias</h3>
+                    <p class="card-meta">7 usuários autorizados</p>
+                    <span class="badge badge-primary">Indicadores</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <div>
+                    <h2>Busca e filtros</h2>
+                    <p class="text-muted">
+                        Localize usuários por nome, e-mail, perfil, órgão ou status.
+                    </p>
+                </div>
+            </div>
+
+            <form class="grid grid-cols-3">
+                <div class="form-field">
+                    <label class="form-label" for="busca">Buscar usuário</label>
+                    <input type="text" id="busca" placeholder="Nome ou e-mail">
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="perfil">Perfil</label>
+                    <select id="perfil">
+                        <option>Todos</option>
+                        <option>Administrador</option>
+                        <option>SEDEF</option>
+                        <option>Conselho Estadual</option>
+                        <option>Secretaria</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="status">Status</label>
+                    <select id="status">
+                        <option>Todos</option>
+                        <option>Ativo</option>
+                        <option>Inativo</option>
+                        <option>Bloqueado</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="orgao">Órgão</label>
+                    <input type="text" id="orgao" placeholder="Ex.: SEDEF">
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="ultimo-acesso">Último acesso</label>
+                    <select id="ultimo-acesso">
+                        <option>Qualquer período</option>
+                        <option>Últimos 7 dias</option>
+                        <option>Últimos 30 dias</option>
+                        <option>Mais de 30 dias</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">&nbsp;</label>
+                    <button type="submit" class="btn btn-primary">
+                        Filtrar
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <div>
+                    <h2>Usuários cadastrados</h2>
+                    <p class="text-muted">
+                        Usuários autorizados a acessar funcionalidades internas do sistema.
+                    </p>
+                </div>
+
+                <div class="cluster">
+                    <button type="button" class="btn btn-outline">Exportar CSV</button>
+                    <button type="button" class="btn btn-outline">Exportar PDF</button>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Perfil</th>
+                            <th>Órgão</th>
+                            <th>Status</th>
+                            <th>Último acesso</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>joao@email.com</td>
+                            <td><span class="badge badge-primary">Secretaria</span></td>
+                            <td>Secretaria de Estado da Educação</td>
+                            <td><span class="status-pill status-pill--done">Ativo</span></td>
+                            <td>17/06/2026</td>
+                            <td>
+                                <button type="button" class="btn btn-outline">Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Maria Souza</td>
+                            <td>maria@email.com</td>
+                            <td><span class="badge badge-primary">Conselho Estadual</span></td>
+                            <td>Conselho Estadual</td>
+                            <td><span class="status-pill status-pill--done">Ativo</span></td>
+                            <td>16/06/2026</td>
+                            <td>
+                                <button type="button" class="btn btn-outline">Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Ana Lima</td>
+                            <td>ana@email.com</td>
+                            <td><span class="badge badge-success">SEDEF</span></td>
+                            <td>SEDEF</td>
+                            <td><span class="status-pill status-pill--progress">Em revisão</span></td>
+                            <td>18/06/2026</td>
+                            <td>
+                                <button type="button" class="btn btn-outline">Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Carlos Oliveira</td>
+                            <td>carlos@email.com</td>
+                            <td><span class="badge badge-danger">Administrador</span></td>
+                            <td>Administração do Sistema</td>
+                            <td><span class="status-pill status-pill--done">Ativo</span></td>
+                            <td>18/06/2026</td>
+                            <td>
+                                <button type="button" class="btn btn-outline">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2">
+            <section class="card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Editar usuário</h2>
+                        <p class="text-muted">
+                            Usuário selecionado: <strong>Ana Lima</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <form class="stack">
+                    <div class="form-field">
+                        <label class="form-label" for="nome">Nome</label>
+                        <input type="text" id="nome" value="Ana Lima">
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="email">E-mail</label>
+                        <input type="email" id="email" value="ana@email.com">
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="perfil-edicao">Perfil</label>
+                        <select id="perfil-edicao">
+                            <option>Administrador</option>
+                            <option selected>SEDEF</option>
+                            <option>Conselho Estadual</option>
+                            <option>Secretaria</option>
+                            <option>Público geral</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="orgao-edicao">Órgão</label>
+                        <input type="text" id="orgao-edicao" value="SEDEF">
+                    </div>
+
+                    <fieldset class="card">
+                        <legend class="form-label">Status do usuário</legend>
+
+                        <div class="stack">
+                            <label>
+                                <input type="radio" name="status-usuario" checked>
+                                Ativo
+                            </label>
+
+                            <label>
+                                <input type="radio" name="status-usuario">
+                                Inativo
+                            </label>
+
+                            <label>
+                                <input type="radio" name="status-usuario">
+                                Bloqueado
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="cluster">
+                        <button type="submit" class="btn btn-primary">Salvar alterações</button>
+                        <button type="reset" class="btn btn-outline">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Permissões</h2>
+                        <p class="text-muted">
+                            Controle quais funcionalidades Ana Lima pode acessar.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="stack">
+
+                    <fieldset class="card">
+                        <legend class="form-label">Monitoramento</legend>
+
+                        <div class="stack">
+
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>Visualizar indicadores</span>
+                            </label>
+
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>Editar indicadores</span>
+                            </label>
+
+                            <label class="checkbox-item">
+                                <input type="checkbox">
+                                <span>Excluir registros</span>
+                            </label>
+
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>Exportar dados</span>
+                            </label>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="card">
+                        <legend class="form-label">Plano Decenal</legend>
+
+                        <div class="stack">
+
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>Cadastrar problemas públicos</span>
+                            </label>
+
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>Cadastrar compromissos</span>
+                            </label>
+
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>Cadastrar objetivos e tarefas</span>
+                            </label>
+
+                            <label class="checkbox-item">
+                                <input type="checkbox">
+                                <span>Gerenciar usuários</span>
+                            </label>
+
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-primary">
+                        Salvar permissões
+                    </button>
+                </form>
+            </section>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <div>
+                    <h2>Histórico de ações administrativas</h2>
+                    <p class="text-muted">
+                        Registro das ações que alteram o estado do sistema.
+                    </p>
+                </div>
+            </div>
+
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <strong>18/06/2026 09:15</strong><br>
+                    Carlos Oliveira alterou o perfil de Ana Lima:
+                    <strong>Conselho Estadual → SEDEF</strong>.
+                </li>
+
+                <li class="timeline-item">
+                    <strong>17/06/2026 14:30</strong><br>
+                    Carlos Oliveira desbloqueou o usuário João Silva.
+                </li>
+
+                <li class="timeline-item">
+                    <strong>15/06/2026 11:40</strong><br>
+                    Maria Souza teve suas permissões de exportação atualizadas.
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>

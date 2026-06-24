@@ -19,7 +19,7 @@
 
 ## Em Andamento
 
-### C018 - Validação do protótipo
+### C017 - Validação do protótipo
 
 **Descrição:** Cada integrante do grupo deverá encontrar problemas no protótipo inicial, seguindo a seção 8, "8 Validação", do enunciado do trabalho.
 
@@ -29,7 +29,7 @@
 
 ---
 
-### C019 - Indicadores
+### C018 - Indicadores
 
 **Descrição:** Criação de novos card de visualização de indicadores em @prototipo/inicial.html
 
@@ -37,13 +37,35 @@
 
 **Branch:**
 
-### C020 - Navegabilidade entre páginas
+---
+
+### C019 - Navegabilidade entre páginas
 
 **Descrição:** Como as páginas do protótipo foram implementadas de forma indepentende, navegar entre a tela inicial e a tela de login é impossível. Deve ser alterado o protótipo de modo que haja navegabilidade entre eles, como um cabeçalho com href
 
 **Responsável:** Alexander
 
 **Branch:**
+
+---
+
+# C020 - Estilização do Painel Administrativo
+
+**Descrição:** Estilizar a tela de gerenciamento de usuários e painel administrativo e fazer melhorias visando a experiência de usuário, como botão de voltar, ordem das informações apresentadas e consistência visual. 
+
+**Responsável:** Mayara
+
+**Branch:** S4-Prototipacao
+
+---
+
+### C021 - Tela de exportação de dados
+
+**Descrição:** Adicionar funcionalidade de geração de CSV ou PDF, conforme requisitos.
+
+**Responsável:** Mayara
+
+**Branch:** S4-Prototipacao
 
 ---
 
@@ -172,11 +194,11 @@
 
 ### C015 - Painel administrativo
 
-**Descrição:**
+**Descrição:** Desenvolvimento da tela de gerenciamento de usuários e permissões, unificada na tela de gerenciamento de usuários.
 
 **Responsável:** Mayara
 
-**Branch:** 
+**Branch:** S3-Prototipacao-Inicial
 
 ---
 
@@ -186,16 +208,6 @@
 
 **Responsável:** Mayara
 
-**Branch:** 
-
----
-
-### C017 - Tela de exportação de dados
-
-**Descrição:** Geração de CSV ou PDF, conforme requisitos.
-
-**Responsável:** Mayara
-
-**Branch:** 
+**Branch:** S3-Prototipação-Inicial
 
 ---

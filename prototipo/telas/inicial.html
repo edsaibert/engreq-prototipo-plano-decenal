@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Decenal - Criança e Adolescente</title>
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: grid;
+        }
+
+        .nav-btn.active {
+            background: var(--color-secondary-green);
+            color: #11330a;
+        }
+
+        .progress-bar-container {
+            display: grid;
+            gap: var(--space-2);
+            margin-top: var(--space-4);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 1rem;
+            overflow: hidden;
+            border-radius: 999px;
+            background: var(--color-soft-blue);
+            border: 1px solid var(--color-border);
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--color-secondary-green), #7fc86b);
+            border-radius: 999px;
+            transition: width 0.8s ease-in-out;
+        }
+
+        .progress-text {
+            margin: 0;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--color-muted);
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-section stack">
+
+        <header class="bg-brand-primary stack">
+            <div class="cluster header-main">
+                <div class="logo-wrapper">
+                    <img src="logo.png" alt="Logo do sistema">
+                </div>
+
+                <div>
+                    <h1 class="brand-header">Compromissos Decenais da Criança e do Adolescente</h1>
+                    <p class="brand-body-text">
+                        Acompanhamento dos compromissos, indicadores e ações do Plano Decenal da criança e do adolescente.
+                    </p>
+                </div>
+            </div>
+
+            <nav class="cluster header-actions" aria-label="Navegação principal">
+                <button onclick="navigate('tela-inicial')" class="btn btn-secondary nav-btn active" id="btn-tela-inicial" type="button">
+                    Início
+                </button>
+
+                <button onclick="navigate('tela-busca')" class="btn btn-secondary nav-btn" id="btn-tela-busca" type="button">
+                    Busca e Filtros
+                </button>
+
+                <button onclick="navigate('tela-indicadores')" class="btn btn-secondary nav-btn" id="btn-tela-indicadores" type="button">
+                    Indicadores
+                </button>
+
+                <a href="gerenciamento-usuarios.html" class="btn btn-secondary">
+                    Painel de Administrador
+                </a>
+
+                <button type="button" class="btn btn-secondary" aria-label="Alternar modo de alto contraste">
+                    🌓 Alto Contraste
+                </button>
+            </nav>
+        </header>
+
+        <section id="tela-inicial" class="screen active stack">
+            <section class="card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Visão geral dos compromissos</h2>
+                        <p class="text-muted">
+                            Acompanhe a evolução das políticas públicas e os 23 problemas públicos vinculados ao Plano Decenal.
+                        </p>
+                    </div>
+
+                    <span class="section-kicker">23 problemas públicos</span>
+                </div>
+
+                <div class="grid grid-cols-3">
+                  <article class="card card-accent">
+                        <h3 class="card-title">Educação</h3>
+                        <p class="card-meta">Foco na permanência escolar e redução da evasão.</p>
+                        <span class="badge badge-primary">Em monitoramento</span>
+
+                        <div class="cluster" style="margin-top: 1rem;">
+                            <a href="hierarquia.html" class="btn btn-outline">
+                                Ver detalhes
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="card card-accent card-accent-success">
+                        <h3 class="card-title">Segurança Alimentar</h3>
+                        <p class="card-meta">Proteção social e nutricional de famílias vulneráveis.</p>
+                        <span class="badge badge-success">Acompanhamento ativo</span>
+                    </article>
+
+                    <article class="card card-accent">
+                        <h3 class="card-title">Saúde Mental</h3>
+                        <p class="card-meta">Atenção psicossocial voltada à infância e adolescência.</p>
+                        <span class="badge badge-primary">Indicadores vinculados</span>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section id="tela-busca" class="screen stack">
+            <section class="card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Busca e filtros de compromissos</h2>
+                        <p class="text-muted">
+                            Localize compromissos por palavra-chave, responsável ou eixo de atuação.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="grid grid-cols-3">
+                    <div class="form-field">
+                        <label class="form-label" for="busca-compromisso">Buscar compromisso</label>
+                        <input type="text" id="busca-compromisso" placeholder="Palavra-chave ou responsável">
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="eixo-compromisso">Eixo/Compromisso</label>
+                        <select id="eixo-compromisso">
+                            <option value="">Todos</option>
+                            <option value="educacao">Educação</option>
+                            <option value="saude">Saúde Mental</option>
+                            <option value="violencia">Violência Infantil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label">&nbsp;</label>
+                        <button class="btn btn-primary" type="button" onclick="alert('Filtragem aplicada no protótipo!')">
+                            Filtrar
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="grid grid-cols-2">
+                <article class="card card-accent">
+                    <h3 class="card-title">Objetivo: ampliar o monitoramento de adolescentes com risco de evasão</h3>
+                    <p class="card-meta"><strong>Linha de ação:</strong> Implementar mecanismos digitais de acompanhamento.</p>
+                    <p class="card-meta"><strong>Responsável:</strong> Secretaria de Educação</p>
+                    <span class="status-pill status-pill--progress">Em andamento</span>
+                </article>
+
+                <article class="card card-accent">
+                    <h3 class="card-title">Objetivo: melhorar a capacidade de identificação</h3>
+                    <p class="card-meta"><strong>Linha de ação:</strong> Integrar informações de programas sociais.</p>
+                    <p class="card-meta"><strong>Responsável:</strong> Assistência Social</p>
+                    <span class="status-pill status-pill--pending">Não iniciada</span>
+                </article>
+            </section>
+        </section>
+
+        <section id="tela-indicadores" class="screen stack">
+            <section class="card">
+                <div class="section-heading">
+                    <div>
+                        <h2>Progresso dos indicadores</h2>
+                        <p class="text-muted">
+                            Monitoramento contínuo das metas estabelecidas.
+                        </p>
+                    </div>
+
+                    <div class="cluster">
+                        <button type="button" class="btn btn-outline" onclick="exportarCSV()">Exportar CSV</button>
+                        <button type="button" class="btn btn-outline" onclick="exportarPDF()">Exportar PDF</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2">
+                    <article class="card card-accent">
+                        <h3 class="card-title">Taxa de Evasão Escolar entre Adolescentes de 15 a 17 anos</h3>
+                        <p class="card-meta">Meta de redução para o ano atual.</p>
+
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" aria-label="65% da meta atingida">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                            <p class="progress-text">65% da meta atingida</p>
+                        </div>
+                    </article>
+
+                    <article class="card card-accent card-accent-success">
+                        <h3 class="card-title">Famílias Acompanhadas — Nutrição</h3>
+                        <p class="card-meta">Quantidade de famílias em segurança alimentar.</p>
+
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" aria-label="40% da meta atingida">
+                                <div class="progress-fill" style="width: 40%;"></div>
+                            </div>
+                            <p class="progress-text">40% da meta atingida</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        function navigate(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(screenId).classList.add('active');
+
+            const btnId = screenId.replace('tela-', 'btn-tela-');
+            document.getElementById(btnId).classList.add('active');
+
+            if (screenId === 'tela-indicadores') {
+                const fills = document.querySelectorAll('.progress-fill');
+
+                fills.forEach(fill => {
+                    const width = fill.style.width;
+                    fill.style.width = '0%';
+
+                    setTimeout(() => {
+                        fill.style.width = width;
+                    }, 50);
+                });
+            }
+        }
+
+        function exportarCSV() {
+            alert('Protótipo: exportação dos indicadores para CSV.');
+        }
+
+        function exportarPDF() {
+            alert('Protótipo: exportação dos indicadores para PDF.');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const telaPelaUrl = window.location.hash.replace('#', '');
+
+            if (telaPelaUrl && document.getElementById(telaPelaUrl)) {
+                navigate(telaPelaUrl);
+            }
+        });
+    </script>
+</body>
+</html>

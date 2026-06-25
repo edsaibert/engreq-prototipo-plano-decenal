@@ -17,3 +17,7 @@
 # v3:
 **Data:** 21/06
 **Descrição:** Nessa versão, todas as telas foram implementadas, bem como arquivos de entrega revisados. Para as próximas versões, o protótipo será melhorado, com ênfase na navegabilidade, e demais arquivos necessários alterados. Também, foi construída a matriz de rastreabilidade parcial, sendo necessário a finalização das telas para finalizar o preenchimento da matriz.
+
+# v4:
+**Data:** 25/06
+**Descrição:** Essa é a versão final. Nela, as telas tem navegabilidade, padrão no CSS, identidade visual unificada e acessibilidade (alto contraste). Além disso, a matriz de rastreabilidade agora permite ver em qual tela cada requisito está implementado.

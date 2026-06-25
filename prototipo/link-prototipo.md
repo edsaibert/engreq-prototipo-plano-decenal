@@ -1,0 +1,1 @@
+O protótipo é autocontido em ```\prototipo\telas\```.
